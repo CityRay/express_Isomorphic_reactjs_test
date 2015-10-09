@@ -6,10 +6,11 @@ html, body {
   padding-top: 15px;
 }
 
-h1{
+h1, h2{
   text-align: center;
   color: #fcfcfc  
 }
+
 form{
   text-align: center;
 }
