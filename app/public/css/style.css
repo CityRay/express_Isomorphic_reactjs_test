@@ -1,0 +1,77 @@
+html, body {
+  background: #333;
+  background-image: url('https://dl.dropboxusercontent.com/u/14898/Photos/NSTexturedFullScreenBackgroundColor.png');
+  width: 100%;
+  height: 100%;
+  padding-top: 15px;
+}
+
+h1{
+  text-align: center;
+  color: #fcfcfc  
+}
+form{
+  text-align: center;
+}
+.callout {
+  margin: 0;
+}
+.close,
+.mark-done {
+  transition: opacity 0.3s linear,
+    color 0.3s linear;
+}
+.close:hover {
+  color: #DD0000;
+}
+.mark-done {
+  opacity: 0.2;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.mark-done:hover {
+  opacity: 0.5;
+  color: #00DD00;
+}
+.callout-success {
+  text-decoration: line-through;
+}
+.todo-form {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+i {
+  font-style: normal !important;
+}
+
+
+#example div div{
+  padding:10px;
+  background: blue;
+  display:block;
+  width:100px;
+  margin:5px;
+  color: white;
+}
+
+.example-enter {
+  opacity: 0.01;
+  transition: opacity 1s ease-in;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+}
+
+.example-leave {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+}
+.time{
+  font-size: 7px;
+  margin-left: 43px;
+}

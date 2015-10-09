@@ -1,0 +1,12 @@
+extends layout
+ 
+block content
+    h1= title
+    h2 TODO LIST
+    form#formAddUser(name="addtodo",method="post",action="/api/addtodo")
+        input#inputUserEmail(type="text", placeholder="content", name="content")
+        button#btnSubmit(type="submit") submit
+    h2 Delete
+    form#formAddUser(name="destory",method="post",action="/api/destory")
+        input#inputUserName(type="text", placeholder="id", name="id")
+        button#btnSubmit(type="submit") submit

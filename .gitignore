@@ -1,0 +1,11 @@
+.DS_Store
+node_modules
+*.sock
+*.log
+.c9
+*.lock
+app/public/build
+
+.sass-cache
+sass
+config.rb

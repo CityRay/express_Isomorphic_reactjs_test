@@ -1,0 +1,37 @@
+{
+  "name": "express-react-todolist",
+  "version": "0.0.2",
+  "private": true,
+  "author": "RayLin",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "DEBUG=app npm start"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "^2.3.4",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "jquery": "^2.1.4",
+    "mongodb": "*",
+    "mongoose": "^4.1.10",
+    "mongoskin": "^2.0.0",
+    "morgan": "^1.6.1",
+    "path": "^0.12.7",
+    "react": "^0.13.3",
+    "serve-favicon": "~2.3.0",
+    "stylus": "^0.52.4"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
+    "node-jsx": "^0.13.3",
+    "react-tools": "^0.13.3",
+    "reactify": "^1.1.1"
+  }
+}
