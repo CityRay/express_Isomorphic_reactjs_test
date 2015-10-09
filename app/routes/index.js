@@ -11,11 +11,16 @@ var React = require('react/addons'),
 
 router.get('/', function(req, res) {
     
-    var reactHtml = React.renderToString(ReactApp({ name:'ray' }));
+    var seed = {
+      name: 'ray',
+      age: '20'
+    };
+    
+    var reactHtml = React.renderToString(new ReactApp({ seed: seed }));
     
     res.render('index.ejs', { 
                 title: 'React Isomorphic TodoList', 
-                reactOutput: reactHtml });
+                reactOutput: reactHtml, seed: JSON.stringify(seed) });
 });
 
 module.exports = router;

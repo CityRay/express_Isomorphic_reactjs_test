@@ -29,7 +29,8 @@ var ReactApp = React.createClass({
         }
       },
       componentDidMount: function () {
-        console.log( "name: " + this.props.name );
+        console.log('seed: ');
+        console.log(this.props.seed );
         this.loadCommentsFromServer();
       },
       loadCommentsFromServer: function() {
@@ -141,7 +142,7 @@ var ReactApp = React.createClass({
         return (
           <div className='container'>
             <div className='col-xs-6 col-xs-offset-3'>
-              <h1>NODE REACT TodoList</h1>
+              <h1>NODE REACT TodoList - {this.props.seed.name}</h1>
                 
                 <ReactCSSTransitionGroup transitionName="example">
                 {this.showTodoList()}

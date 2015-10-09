@@ -3,7 +3,10 @@
     <div id="main">
       <%- reactOutput %>
     </div>
-
+    <script>
+        window.seed = <%- seed %>;
+    </script>
+    
 	<!-- comment out main.js to see server side only rendering -->
 	<script src="/build/main.js"></script>
 

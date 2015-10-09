@@ -5,6 +5,6 @@ var mountNode = document.getElementById('main');
 
 if (typeof window !== "undefined") {
     window.onload = function(){
-        React.render(App(), mountNode);
+        React.render(new App({ seed: window.seed }), mountNode);
     };
 }
