@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var mongoose = require( 'mongoose' );
+var Todo     = mongoose.model( 'Todo' );
 
 require('node-jsx').install({
     harmony: true,
@@ -10,17 +12,23 @@ var React = require('react/addons'),
     ReactApp = React.createFactory(require('../app/components/App'));
 
 router.get('/', function(req, res) {
+
+    Todo.find().
+        sort( 'update_at' ).
+        exec( function ( err, todos, next ){
+        if( err ) return next( err );
+        
+        var seed = todos;
+        
+        var reactHtml = React.renderToString(new ReactApp({ seed: seed }));
+        res.render('index.ejs', { 
+            title: 'React Isomorphic TodoList', 
+            reactOutput: reactHtml, seed: JSON.stringify(seed) });
+    });
     
-    var seed = {
-      name: 'ray',
-      age: '20'
-    };
     
-    var reactHtml = React.renderToString(new ReactApp({ seed: seed }));
     
-    res.render('index.ejs', { 
-                title: 'React Isomorphic TodoList', 
-                reactOutput: reactHtml, seed: JSON.stringify(seed) });
+    
 });
 
 module.exports = router;
